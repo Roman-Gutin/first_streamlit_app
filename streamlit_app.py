@@ -8,7 +8,7 @@ streamlit.title('LETF Spread Dashboard')
 fruits = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
 streamlit.multiselect('pick fruits or die:', list(fruits.index))
 streamlit.dataframe(fruits)
-fruit = kiwi
+fruit = 'kiwi'
 fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit}")
 streamlit.text(fruityvice_response.json())
 # write your own comment -what does the next line do? 

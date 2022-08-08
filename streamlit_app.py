@@ -3,6 +3,7 @@ import streamlit
 import pandas as pd
 import requests
 import snowflake.connector
+from urlib.error import URLError
 
 streamlit.title('LETF Spread Dashboard')
 
@@ -24,3 +25,6 @@ my_data_row = my_cur.fetchall()
 streamlit.text("The Fruit Load List:")
 streamlit.dataframe(my_data_row)
 add_my_fruit = streamlit.text_input('What fruit tickles your fancy Part 2?', 'jackfruit')
+my_cur.execcute("insert into fruit_load_list values ('from streamlist')")
+streamlit.stop()
+              

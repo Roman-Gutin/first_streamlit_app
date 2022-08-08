@@ -36,6 +36,6 @@ if streamlit.button('Get Fruit Load List'):
     streamlit.dataframe(get_fruit_list())
 
 add_my_fruit = streamlit.text_input('What fruit tickles your fancy Part 2?', 'jackfruit')
-my_cur.execcute("insert into fruit_load_list values ('from streamlist')")
+
 
               

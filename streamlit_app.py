@@ -19,11 +19,11 @@ try:
   fruit_choice = streamlit.text_input('What fruit tickles your fancy?', 'Kiwi')
   if not fruit_choice:
     streamlit.error('Please select a fruit to get information.')
-   else:
+  else:
     data= get_fruity_vice_data(fruit_choice)
     streamlit.dataframe(data)
 except URLErorr as e:
-  streamlit.error()
+    streamlit.error()
 streamlit.stop()    
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()

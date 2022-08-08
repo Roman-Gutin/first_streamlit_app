@@ -15,7 +15,8 @@ streamlit.text(fruityvice_response.json())
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
+txt = streamlit.text(str(-1))
 while 1:
   for i in range(10):
-    streamlit.text(str(i))
+    txt = streamlit.text(str(1))
 
